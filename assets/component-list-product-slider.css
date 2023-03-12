@@ -1,0 +1,22 @@
+.section-lps{
+    padding: 50px 0px;
+}
+.container-lps{
+    overflow: hidden;
+}
+.link-collection-lps{
+   text-decoration: none;
+    
+}
+
+.container-lps h2{
+font-family: 'Helvetica Neue';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 22px;
+color: #000000;
+margin: 0;
+margin-bottom: 38px;
+}
+

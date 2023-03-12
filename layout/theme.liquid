@@ -37,7 +37,11 @@
       assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
       assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
     %}
-
+    {% comment %} Swiper CSS {% endcomment %}
+    <link
+      href="{{ 'swiper-bundle.min.css' | asset_url }}"
+      rel="stylesheet"
+    >
     {% style %}
       {{ settings.type_body_font | font_face: font_display: 'swap' }}
       {{ body_font_bold | font_face: font_display: 'swap' }}
@@ -290,5 +294,11 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+    {% comment %} Swiper JS {% endcomment %}
+    <script
+      src="{{ 'swiper-bundle.min.js' | asset_url }}"
+      defer="defer"
+    ></script>
+
   </body>
 </html>
