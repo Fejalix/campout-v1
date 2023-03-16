@@ -1,7 +1,6 @@
 .quick-add {
   position: absolute;
   grid-row-start: 4;
-  margin: 0 0 1rem;
   z-index: 100;
   bottom: 0px;
   right: 0px;

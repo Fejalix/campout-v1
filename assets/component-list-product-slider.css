@@ -10,13 +10,12 @@
 }
 
 .container-lps h2{
-font-family: 'Helvetica Neue';
-font-style: normal;
-font-weight: 700;
-font-size: 36px;
-line-height: 22px;
-color: #000000;
-margin: 0;
-margin-bottom: 38px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    margin-top: 0;
+    color: #000000;
 }
 
