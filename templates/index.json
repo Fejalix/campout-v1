@@ -54,7 +54,7 @@
         "title": "Titre de la liste (Top Vente)",
         "description": "",
         "collection": "dunk-low",
-        "enable_quick_add": true
+        "enable_quick_add": false
       }
     },
     "6a0cc683-3c5a-4131-8381-6b64cd2bae6a": {
@@ -105,17 +105,14 @@
         "linkurl": "shopify:\/\/collections\/all"
       }
     },
-    "collage": {
-      "type": "collage",
+    "f3bdac18-dbb4-4d2f-ac24-710abf2ecbc9": {
+      "type": "section-promo",
       "settings": {
-        "heading": "",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "card_styles": "product-card-wrapper",
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "title": "Des produits authentiques",
+        "subtitle": "Offre limitée",
+        "buttontext": "Toutes les sneakers",
+        "buttonurl": "",
+        "image": "shopify:\/\/shop_images\/hermes-rivera-OX_en7CXMj4-unsplash_1.jpg"
       }
     }
   },
@@ -123,6 +120,6 @@
     "image_banner",
     "a34757d1-bece-4f31-914a-baddff6ead1f",
     "6a0cc683-3c5a-4131-8381-6b64cd2bae6a",
-    "collage"
+    "f3bdac18-dbb4-4d2f-ac24-710abf2ecbc9"
   ]
 }
