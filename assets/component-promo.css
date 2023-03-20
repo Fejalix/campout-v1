@@ -1,6 +1,6 @@
 .sp-section{
-    /* background-color: #1D252C; */
-    background-color: rgb(252, 226, 193);
+    background-color: #1D252C;
+    /* background-color: rgb(252, 226, 193); */
 }
 .sp-container{
     display:flex;
