@@ -1,0 +1,101 @@
+{{ 'component-banner-slider.css' | asset_url | stylesheet_tag }}
+
+<div class="section-sbs">
+    <div>
+        <div class="swiper-sbs">
+            <div class="swiper-wrapper swiper-wrapper-sbs">
+                {%for block in section.blocks %}
+                    <div class="swiper-slide slide-sbs">
+                        <div class="container-image">
+                            <img class="image-banner" src="{{ block.settings.image | img_url: 'master' }}" alt="">  
+                        </div>
+                                           
+                        <div class="content-text">
+                            <div class="h1">{{ block.settings.heading }}</div>
+                            <p>{{ block.settings.description }}</p>
+                            <div class="container-button"> 
+                                <a class="button" href="{{ block.settings.url-button }}">{{ block.settings.text-button }}</a>
+                            </div>
+                           
+                        </div>
+                        
+                    </div>
+                {% endfor %}
+            </div>
+            {% comment %} <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div> {% endcomment %}
+          </div> 
+    </div>
+</div>
+
+{% javascript %}
+
+window.addEventListener('load', function () {
+  const swiper = new Swiper('.swiper-sbs', {
+    loop: true,
+    autoplay: {
+        delay: 5000,
+      },
+
+  });
+});
+{% endjavascript%}
+
+{% schema %}
+{
+  "name": "section bannière slide",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+        "type": "text",
+        "id": "title",
+        "label": "Titre"
+    }
+  ],
+  "blocks":[
+    {
+      "type": "slide",
+      "name": "Une slide",
+      "settings": [
+        {
+            "type": "richtext",
+            "id": "heading",
+            "label": "Titre"
+        },
+        {
+            "type": "richtext",
+            "id": "description",
+            "label": "description"
+        },
+        {
+            "type": "text",
+            "id": "text-button",
+            "label": "Text du bouton"
+        },
+        {
+            "type": "url",
+            "id": "url-button",
+            "label": "L'url du bouton"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        }
+
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "section bannière slide",
+      "blocks": [
+        {
+          "type": "slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
