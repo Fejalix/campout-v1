@@ -3,8 +3,7 @@
     /* background-color: rgb(252, 226, 193); */
 }
 .sp-container{
-    margin: 0 auto;
-    max-width: 1920px;
+
     display:flex;
     flex-direction: row;
     justify-content: center;
