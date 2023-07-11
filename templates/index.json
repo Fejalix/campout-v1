@@ -55,27 +55,16 @@
         "template--18355092291899__ff97f7c1-c77b-4291-836b-80a1ace24870-167966187987fd5f2c-0": {
           "type": "slide",
           "settings": {
-            "heading": "<p>Notre sélection <\/p><p>saisonnière<\/p>",
+            "heading": "<p>Notre <\/p><p>sélection saisonnière<\/p>",
             "description": "",
             "text-button": "Découvrir",
             "url-button": "shopify:\/\/collections\/jordan-1",
             "image": "shopify:\/\/shop_images\/nelson-ndongala-kKObh7tUPNc-unsplash.jpg"
           }
-        },
-        "dfee5cbf-8814-41bf-9729-26ace66ab7a3": {
-          "type": "slide",
-          "settings": {
-            "heading": "",
-            "description": "",
-            "text-button": "",
-            "url-button": "",
-            "image": "shopify:\/\/shop_images\/nelson-ndongala-kKObh7tUPNc-unsplash_2.jpg"
-          }
         }
       },
       "block_order": [
-        "template--18355092291899__ff97f7c1-c77b-4291-836b-80a1ace24870-167966187987fd5f2c-0",
-        "dfee5cbf-8814-41bf-9729-26ace66ab7a3"
+        "template--18355092291899__ff97f7c1-c77b-4291-836b-80a1ace24870-167966187987fd5f2c-0"
       ],
       "settings": {
         "title": ""
@@ -141,7 +130,7 @@
     "f3bdac18-dbb4-4d2f-ac24-710abf2ecbc9": {
       "type": "section-promo",
       "settings": {
-        "title": "Des produits authentiques",
+        "title": "35 % de réduction uniquement ce vendredi et obtenez un cadeau spécial",
         "subtitle": "Offre limitée",
         "buttontext": "Toutes les sneakers",
         "buttonurl": "",
