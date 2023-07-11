@@ -86,7 +86,7 @@ color: rgba(0, 0, 0, 0.5);
     margin-bottom: 20px;
 }
 .subtitle p{
-  font-family: 'Helvetica Neue';
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -132,7 +132,7 @@ form{
   left: 15px;
   font-family: 'Roboto';
   color: #999999;
-  font-weight: 300;
+  /* font-weight: 300; */
   font-size: 18px;
   pointer-events: none;
   transform: translateY(-50%);
@@ -144,7 +144,7 @@ form{
   left: 15px;
   font-family: 'Roboto';
   color: #999999;
-  font-weight: 300;
+  /* font-weight: 300; */
   font-size: 18px;
   pointer-events: none;
   transform: translateY(-50%);
