@@ -34,7 +34,7 @@
 window.addEventListener('load', function () {
   const swiper = new Swiper('.swiper-lps', {
     loop: false,
-    slidesPerView: 3.33,
+    slidesPerView: 5,
     spaceBetween: 30,
     breakpoints: {
     // when window width is >= 320px
@@ -70,6 +70,12 @@ window.addEventListener('load', function () {
       // when window width is >= 1280
       1280: {
         slidesPerView: 3.33,
+      },
+      1400: {
+        slidesPerView: 4,
+      },
+      1650: {
+        slidesPerView: 4.8,
       },
     },
   });
