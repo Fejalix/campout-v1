@@ -30,8 +30,10 @@
         </div>
       
     </div>
-</div>{% javascript %}
+</div>
+{% javascript %}
 window.addEventListener('load', function () {
+  console.log('load');
   const swiper = new Swiper('.swiper-lps', {
     loop: false,
     slidesPerView: 5,

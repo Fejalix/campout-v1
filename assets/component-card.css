@@ -342,6 +342,7 @@ Surcharge CSS fj
 */
 .fj-card-product-custom {
   width: 320px;
+  /* width: 255px; */
   margin-right: 0;
   /* background: blue; */
   position: relative;

@@ -19,8 +19,13 @@
 <noscript>{{ 'section-product-recommendations.css' | asset_url | stylesheet_tag }}</noscript>
 
 {%- style -%}
-  .ul-product-item {
-    justify-content: space-between !important;
+  .ul-product-item-pr {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: start !important;
+    gap: 50px;
+    padding-left: 0;
   }
   .section-pr{
     padding: 50px 0;
@@ -55,22 +60,6 @@
     }
   }
 {%- endstyle -%}
-<div class="swiper-lps">
-            <div class="swiper-wrapper">               
-                        {% comment %} Nombre de produit dans la collection : {% endcomment %}
-                    {% comment %} {{ section.settings.collection.all_products_count }} {% endcomment %}                     
-                    {% for recommendation in recommendations.products %}
-                    <div class="swiper-slide">                       
-                        {% render 'card-product-custom'
-                          , card_product: recommendation,
-                          media_aspect_ratio: section.settings.image_ratio,
-                          show_secondary_image: section.settings.show_secondary_image,
-                          show_vendor: section.settings.show_vendor,
-                          show_rating: section.settings.show_rating %}        
-                    </div>
-                    {%endfor%}              
-              </div>
-</div>
 
 <div class="section-pr color-{{ section.settings.color_scheme }} gradient no-js-hidden">
   <product-recommendations class="product-recommendations page-width section-{{ section.id }}-padding isolate" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ section.settings.products_to_show }}">
@@ -92,9 +81,9 @@
             </div>
         </div> {% endcomment %}
 {% comment %} END SLIDER {% endcomment %}
-      <ul class="ul-product-item grid product-grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down" role="list">
+      <ul class="ul-product-item-pr " role="list">
         {% for recommendation in recommendations.products %}
-          <li class="li-product-item  grid__item">
+          <li class="li-product-itemt">
             {% render 'card-product-custom'
              , card_product: recommendation,
              media_aspect_ratio: section.settings.image_ratio,
