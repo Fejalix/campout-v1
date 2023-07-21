@@ -35,7 +35,7 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": true
+            "show_dynamic_checkout": false
           }
         },
         "description": {
@@ -47,8 +47,8 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "AUTHENTICITÉ",
-            "icon": "leather",
-            "content": "{{ product.metafields.custom.authenticit_ | metafield_tag }}",
+            "icon": "bottle",
+            "content": "<p>Chaque paire de sneakers que nous proposons est soigneusement vérifiée par nos <strong>experts<\/strong> pour vous garantir une <strong>authenticité absolue<\/strong>. Nos produits proviennent directement de <strong>revendeurs partenaires de confiance<\/strong>, triés sur le volet pour leur expertise dans l'industrie des sneakers. Vous recevrez votre commande dans la <strong>boîte d'origine<\/strong>, accompagnée de tous les accessoires et du <strong>sceau CampOut<\/strong>, gage de qualité et de contrôle effectué par notre équipe.<\/p><p><strong>Transparence et qualité<\/strong><br\/>Chez CampOut, nous sommes fiers de notre <strong>engagement envers la qualité<\/strong>. Chaque paire est soumise à un processus d'<strong>authentification rigoureux<\/strong>, garantissant que vous recevrez uniquement des produits <strong>d'exception<\/strong>. Nous accordons une grande importance à votre satisfaction, et nous nous efforçons de vous offrir la <strong>meilleure expérience d'achat<\/strong> possible.<\/p><p>Explorez notre <a href=\"\/collections\/all\" title=\"Tous les produits\"><strong>collection de sneakers<\/strong><\/a> authentiques et trouvez la paire parfaite pour compléter votre style unique. Nous sommes ravis de partager notre passion pour les sneakers avec vous et de vous accompagner dans votre recherche de l'originalité.<\/p><p>N'hésitez pas à <a href=\"\/pages\/contact\" title=\"Contact\"><strong>nous contacter<\/strong><\/a> si vous avez des questions ou des demandes spécifiques. Merci de nous faire confiance pour répondre à vos besoins en matière de sneakers authentiques et tendance !<\/p>",
             "page": ""
           }
         },
@@ -56,7 +56,7 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "LIVRAISON & RETOUR",
-            "icon": "truck",
+            "icon": "apple",
             "content": "{{ product.metafields.custom.livraison_retour | metafield_tag }}",
             "page": ""
           }
@@ -65,8 +65,8 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "MÉTHODE DE PAIEMENT",
-            "icon": "price_tag",
-            "content": "{{ product.metafields.custom.moyen_de_paiement | metafield_tag }}",
+            "icon": "banana",
+            "content": "<p>A FAIRE<\/p>",
             "page": ""
           }
         },

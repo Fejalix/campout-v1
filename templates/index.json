@@ -75,14 +75,14 @@
       "settings": {
         "title": "Titre de la liste (Top Vente)",
         "description": "",
-        "collection": "dunk-low",
+        "collection": "nike-dunk-low",
         "enable_quick_add": false
       }
     },
     "6a0cc683-3c5a-4131-8381-6b64cd2bae6a": {
       "type": "section-list-collection",
       "blocks": {
-        "9d06883e-5da3-4a17-b44e-0d83f89fada6": {
+        "943c9769-872f-4f53-9887-161642469deb": {
           "type": "section",
           "settings": {
             "test": "dunk-low"
@@ -92,12 +92,6 @@
           "type": "section",
           "settings": {
             "test": "jordan-1"
-          }
-        },
-        "943c9769-872f-4f53-9887-161642469deb": {
-          "type": "section",
-          "settings": {
-            "test": "dunk-low"
           }
         },
         "bfc83be7-74af-46f6-8429-868626d6b6ce": {
@@ -114,9 +108,8 @@
         }
       },
       "block_order": [
-        "9d06883e-5da3-4a17-b44e-0d83f89fada6",
-        "a63ccd06-beff-4866-bcd8-933fb86d219f",
         "943c9769-872f-4f53-9887-161642469deb",
+        "a63ccd06-beff-4866-bcd8-933fb86d219f",
         "bfc83be7-74af-46f6-8429-868626d6b6ce",
         "4dc3e16d-db48-46b4-a4bb-4b6e3f1c132f"
       ],

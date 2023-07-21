@@ -1561,13 +1561,13 @@
                 "label": "Aucune"
               },
               "options__2": {
-                "label": "Pomme"
+                "label": "Livraison CampOut"
               },
               "options__3": {
-                "label": "Banane"
+                "label": "Paiement CampOut"
               },
               "options__4": {
-                "label": "Bouteille"
+                "label": "Check CampOut"
               },
               "options__5": {
                 "label": "Boîte"
@@ -2733,13 +2733,13 @@
                 "label": "Aucun"
               },
               "options__2": {
-                "label": "Pomme"
+                "label": "Livraison CampOut"
               },
               "options__3": {
-                "label": "Banane"
+                "label": "Paiement CampOut"
               },
               "options__4": {
-                "label": "Bouteille"
+                "label": "Check CampOut"
               },
               "options__5": {
                 "label": "Boîte"
