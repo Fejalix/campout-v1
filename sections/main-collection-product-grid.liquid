@@ -20,12 +20,18 @@ ul{
   list-style: none;
 }
 .mcpg-flex-section{
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     flex-direction: row;
     gap: 50px;
+    padding: 0; */
     padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 320px);
+  grid-gap: 40px 20px; 
+      justify-content: center;
+  
 
 }
 .container-filtre-custom{
