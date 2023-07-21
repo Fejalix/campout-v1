@@ -394,7 +394,7 @@
       <summary class="mobile-facets__open-wrapper focus-offset">
         <span class="mobile-facets__open{% if filter_type == 'drawer' and enable_filtering == false %} medium-hide large-up-hide{% endif %}">
           {% render 'icon-filter' %}
-          <span class="mobile-facets__open-label button-label medium-hide large-up-hide">
+          {% comment %} <span class="mobile-facets__open-label button-label medium-hide large-up-hide">
             {%- if enable_filtering and enable_sorting -%}
               {{ 'products.facets.filter_and_sort' | t }}
             {%- elsif enable_filtering -%}
@@ -402,12 +402,12 @@
             {%- elsif enable_sorting -%}
               {{ 'products.facets.sort_button' | t }}
             {%- endif -%}
-          </span>
-          <span class="mobile-facets__open-label button-label small-hide">
+          </span> {% endcomment %}
+          {% comment %} <span class="mobile-facets__open-label button-label small-hide">
             {%- if enable_filtering -%}
               {{ 'products.facets.filter_button' | t }}
             {%- endif -%}
-          </span>
+          </span> {% endcomment %}
         </span>
         <span tabindex="0" class="mobile-facets__close mobile-facets__close--no-js">{%- render 'icon-close' -%}</span>
       </summary>
@@ -457,7 +457,7 @@
                       <div id="FacetMobile-{{ forloop.index }}-{{ section.id }}" class="mobile-facets__submenu gradient">
                         <button class="mobile-facets__close-button link link--text focus-inset" aria-expanded="true" type="button">
                           {% render 'icon-arrow' %}
-                          {{ filter.label | escape }}
+                          {{ filter.label | escape }} test
                         </button>
                         <ul class="mobile-facets__list list-unstyled" role="list">
                           {%- for value in filter.values -%}
