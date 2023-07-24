@@ -57,7 +57,7 @@
           "settings": {
             "heading": "LIVRAISON & RETOUR",
             "icon": "apple",
-            "content": "{{ product.metafields.custom.livraison_retour | metafield_tag }}",
+            "content": "",
             "page": ""
           }
         },
