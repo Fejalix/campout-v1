@@ -7,6 +7,10 @@
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        
 
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
@@ -37,7 +41,11 @@
       assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
       assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
     %}
-
+    {% comment %} Swiper CSS {% endcomment %}
+    <link
+      href="{{ 'swiper-bundle.min.css' | asset_url }}"
+      rel="stylesheet"
+    >
     {% style %}
       {{ settings.type_body_font | font_face: font_display: 'swap' }}
       {{ body_font_bold | font_face: font_display: 'swap' }}
@@ -83,7 +91,7 @@
         --media-shadow-blur-radius: {{ settings.media_shadow_blur }}px;
         --media-shadow-visible: {% if settings.media_shadow_opacity > 0 %}1{% else %}0{% endif %};
 
-        --page-width: {{ settings.page_width | divided_by: 10 }}rem;
+        --page-width: {{ settings.page_width | divided_by: 6.5 }}rem;
         --page-width-margin: {% if settings.page_width == '1600' %}2{% else %}0{% endif %}rem;
 
         --product-card-image-padding: {{ settings.card_image_padding | divided_by: 10.0 }}rem;
@@ -290,5 +298,11 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+    {% comment %} Swiper JS {% endcomment %}
+    <script
+      src="{{ 'swiper-bundle.min.js' | asset_url }}"
+      defer="defer"
+    ></script>
+
   </body>
 </html>

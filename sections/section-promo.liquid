@@ -1,0 +1,59 @@
+{{ 'component-promo.css' | asset_url | stylesheet_tag }}
+<div class="sp-section">
+    <div class="sp-container">
+        <div class="block-image">
+            <img src="{{ section.settings.image | img_url: 'master' }}" alt="">
+        </div>
+        <div class="block-text">
+            <p>{{ section.settings.subtitle }}</p>
+            <h2>{{ section.settings.title }}</h2>
+            <a class="button" href="{{ section.settings.buttonurl }}">
+                {{ section.settings.buttontext }}
+            </a>
+        </div>
+
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Banniere promotion",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Titre",
+            "default": "Des produits authentiques"
+        },
+        {
+            "type": "text",
+            "id": "subtitle",
+            "label": "Sous titre",
+            "default": "Offre limitée"
+        },
+        {
+            "type": "text",
+            "id": "buttontext",
+            "label": "Text du bouton",
+            "default": "Toutes les sneakers"
+        },
+        {
+            "type": "url",
+            "id": "buttonurl",
+            "label": "Url du bouton"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        }
+    ],
+  "presets": [
+    {
+      "name": "Banniere promotionelle"
+    }
+  ]
+}
+{% endschema %}

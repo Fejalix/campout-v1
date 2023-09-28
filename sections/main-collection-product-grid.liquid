@@ -13,6 +13,69 @@
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 
 {%- style -%}
+.cart-container{
+  max-width: 100%;
+}
+ul{
+  list-style: none;
+}
+.mcpg-flex-section{
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 50px;
+    padding: 0; */
+    padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 320px);
+  grid-gap: 40px 20px; 
+      justify-content: center;
+  
+
+}
+.container-filtre-custom{
+  /* overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px; */
+
+
+    width: 100%;
+    overflow-x: auto;
+
+
+}
+.button-filtrage{
+    white-space: nowrap;
+    font-style: normal;
+    /* font-weight: 700; */
+    font-size: 15px;
+    line-height: 24px;
+    color: #262121;
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 100px;
+    border: 1px solid #202124;
+}
+.button-filtrage:hover{
+  transition: 0.3s;
+  background-color: #Eb1b1b;
+  color: white;
+  border: 1px solid #Eb1b1b;
+}
+.content-filtre-custom{
+      padding: 10px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    white-space: nowrap;
+}
+
+
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
@@ -27,6 +90,31 @@
 {%- endstyle -%}
 
 <div class="section-{{ section.id }}-padding">
+  <div class="page-width">
+    <div  class="container-filtre-custom">
+      {% if request.path contains 'collections/all' %}
+        <div class="content-filtre-custom">
+          {% for collection in collections %}
+            {% if collection.metafields.custom.type == true %}
+              <a class="button-filtrage" href="{{ collection.url }}">{{ collection.title }}</a>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% else %}
+        {% if collection.metafields.custom.modeles_associes %}
+          <div class="content-filtre-custom">
+            {% assign url = request.path %}
+            {% assign product_list = collection.metafields.custom.modeles_associes.value %}              
+            {% for item in product_list %}
+              <a class="button-filtrage" href="{{ item.url }}">{{ item.title }}</a>
+            {% endfor %}
+          </div>  
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+
+
   {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
   {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}
     <facet-filters-form class="facets facets-vertical-sort page-width small-hide no-js-hidden">
@@ -94,30 +182,26 @@
               </h2>
             </div>
           </div>
+            
         {%- else -%}
           <div class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}">
             <div class="loading-overlay gradient"></div>
     
             <ul id="product-grid" data-id="{{ section.id }}" class="
-              grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down
-              grid--{{ section.settings.columns_desktop }}-col-desktop">
+              mcpg-flex-section">
               {%- for product in collection.products -%}
                 {% assign lazy_load = false %}
                 {%- if forloop.index > 2 -%}
                   {%- assign lazy_load = true -%}
                 {%- endif -%}
-                <li class="grid__item">
-                  {% render 'card-product',
-                    card_product: product,
-                    media_aspect_ratio: section.settings.image_ratio,
-                    show_secondary_image: section.settings.show_secondary_image,
-                    show_vendor: section.settings.show_vendor,
-                    show_rating: section.settings.show_rating,
-                    lazy_load: lazy_load,
-                    show_quick_add: section.settings.enable_quick_add,
-                    section_id: section.id
-
-                  %}
+                <li class="cart-container">
+                  {% render 'card-product-custom',
+                        card_product: product,
+                        media_aspect_ratio: section.settings.image_ratio,
+                        show_vendor: section.settings.show_vendor,
+                        show_quick_add: section.settings.enable_quick_add,
+                        section_id: section.id
+                        %}  
                 </li>
               {%- endfor -%}
             </ul>

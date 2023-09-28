@@ -1,0 +1,79 @@
+{{ 'component-list-collection.css' | asset_url | stylesheet_tag }}
+<div class="slc-section">
+    <div class="page-width container-slc">
+        <div class="slc-conatiner-text">
+            <p class="slc-oneontilte"> {{ section.settings.oneontitle | capitalize }}</p>
+            <h2 class="slc-tilte">{{ section.settings.title | capitalize }}</h2>
+            <a class="slc-link button" href="{{ section.settings.linkurl }}">              
+                <p> {{ section.settings.linktext | capitalize }}</p>
+                {% render 'icon-arrow' %}
+            </a>
+        </div>       
+        {%- for block in section.blocks -%}
+                <div class="slc-card">
+                    <div  class="card-background">
+                        <div class="image">                
+                            <img src="{{ block.settings.test.image | image_url: width: 500 }}">
+                        </div>
+                    </div>
+                     <a href="{{ block.settings.test.url }}" class="content"> 
+                        <h3 class="card-heading">{{ block.settings.test.title }}</h3> 
+                    </a> 
+                </div>
+            {% comment %} </a> {% endcomment %}
+        {% endfor %}
+    </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "List collection",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Titre",
+            "default": "Collections"
+        },
+        {
+            "type": "text",
+            "id": "oneontitle",
+            "label": "Sur titre",
+            "default": "Découvrez nos"
+        },
+        {
+            "type": "text",
+            "id": "linktext",
+            "label": "Text Du Lien",
+            "default": "Toutes les sneakers"
+        },
+        {
+            "type": "url",
+            "id": "linkurl",
+            "label": "Url Du Lien"
+        }
+    ],
+  "blocks": [
+    {
+      "type": "section",
+      "name": "Une collection",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "test",
+          "label": "Collection",
+          "info": "Choisir la collection à afficher"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "List collection"
+    }
+  ]
+}
+{% endschema %}

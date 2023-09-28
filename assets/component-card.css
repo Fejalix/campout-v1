@@ -336,3 +336,223 @@
 .card-article-info {
   margin-top: 1rem;
 }
+
+/* 
+Surcharge CSS fj 
+*/
+.fj-card-product-custom {
+  width: 320px;
+  /* width: 255px; */
+  margin-right: 0;
+  /* background: blue; */
+  position: relative;
+  
+}
+
+.fj-card-product-custom * {
+  text-decoration: none !important;
+}
+.fj-card-product-custom .price--on-sale .price-item--regular {
+  text-decoration: line-through !important;
+}
+
+.fj-card-product-custom .card .card__inner {
+  width: 100%;
+  max-height: 314px;
+}
+
+.fj-card-product-custom .card {
+  padding: 0;
+  /* box-shadow: 0px 16px 70px rgba(167, 157, 138, 0.15); */
+  /* transition: 0.25s ease; */
+}
+
+/* Hover */
+/* .fj-card-product-custom:hover .media img {
+  transform: scale(1.0175) translateY(-5px) !important;
+}
+
+.fj-card-product-custom:hover .card {
+  box-shadow: 0px 16px 70px rgba(167, 157, 138, 0.35);
+} */
+
+.fj-card-product-custom .card .card__media {
+  background-color: rgba(242, 242, 242, 0.5) !important;
+  border-radius: 10px;
+  
+}.fj-card-product-custom .card .card__media img{
+
+ /* background-color: blue; */
+ object-fit: contain;
+}
+.fj-card-product-custom .media {
+ /* background-color: yellow; */
+}
+
+.fj-card-product-custom .media img {
+
+/* background-color: purple; */
+/* 
+  transition: 0.3s ease; */
+}
+.custome-link-img{
+  /* background-color: green; */
+  width: 10000%;
+}
+
+/* Quick add quantity */
+.fj-card-product-custom .quick-add__submit {
+ background-color: #EB1B1B;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ width: 48px;
+ height: 48px;
+ /* border-color: green; */
+}
+.svg-quick-cart svg{
+  width: 100%;
+  height: 100%;
+  fill: white;
+}
+/*
+.fj-card-product-custom .quick-add-quantity.qa-disabled {
+  opacity: 0.75;
+  user-select: none;
+}
+
+.fj-card-product-custom .quick-add-quantity button {
+  padding: 5px;
+  min-width: 35px;
+  min-height: 35px;
+  font-size: 28px;
+  line-height: 10px;
+}
+
+.fj-card-product-custom .quick-add-quantity button[data-action="less"] {
+  font-size: 34px;
+}
+
+.fj-card-product-custom .quick-add-quantity .quick-add-quantity-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 35px;
+  font-family: "Alegreya Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.fj-card-product-custom .quick-add {
+  width: 50px;
+
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.fj-card-product-custom .card-information {
+  padding-bottom: 0;
+}
+*/
+.fj-card-product-custom .card__content {
+  /* min-height: 170px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 !important;
+}
+.fj-card-product-custom .card__information {
+  padding: 0;
+  margin: 0;
+  margin-top: 13px;
+  /* background-color: red; */
+  position: relative !important;
+}
+.fj-card-product-custom .card__information .card__heading{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #262121;
+  /* max-width: 70%; */
+}
+.fj-card-product-custom .card__information .price {
+  font-family: 'Helvetica Neue';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 24px;
+
+color: #262121;
+}
+
+
+/*
+.fj-card-product-custom .variants {
+  font-size: 16px;
+  line-height: 24px;
+  color: #656597;
+  margin-top: 10px;
+}
+
+.fj-card-product-custom .quick-add button {
+  width: 50px;
+  padding: 5px;
+  background: #23236a;
+  min-width: auto;
+}
+
+.fj-card-product-custom .quick-add button:after {
+  content: none;
+} 
+
+
+
+.fj-card-product-custom .card-stamp {
+  border-radius: 25px;
+  border: 3px solid white;
+  z-index: 3;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
+  min-width: 160px;
+  overflow: hidden;
+}
+
+.fj-card-product-custom .card-stamp > div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 5px 20px;
+}
+
+.fj-card-product-custom .card-stamp span {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+.fj-card-product-custom .card-stamp .card-stamp-green {
+  color: #31a68b;
+  background: #dcf0ec;
+}
+
+.fj-card-product-custom .card-stamp .card-stamp-red {
+  color: #f4785d;
+  background: #feeae5;
+}
+
+.fj-card-product-custom .card-stamp .card-stamp-yellow {
+  color: #eaaa42;
+  background: #fff0d8;
+} */

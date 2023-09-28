@@ -1,0 +1,21 @@
+.section-lps{
+    padding: 50px 0px;
+}
+.container-lps{
+    overflow: hidden;
+}
+.link-collection-lps{
+   text-decoration: none;
+    
+}
+
+.container-lps h2{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    margin-top: 0;
+    color: #000000;
+}
+

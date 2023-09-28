@@ -13,6 +13,33 @@
 .contact .field {
   margin-bottom: 1.5rem;
 }
+.field select{
+  width: 100%;
+  border: none;
+  padding: 15px;
+  margin-right: 15px;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.6rem;
+}
+.field select {
+
+}
+
+/* .field input{
+  font-family: 'Roboto' !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 20 !important;
+  line-height: 22px !important;
+
+color: rgba(0, 0, 0, 0.5);
+} */
+.field select:focus{
+  outline: none;
+  border: black;
+  background-color: none;
+  box-shadow: none;
+}
 
 @media screen and (min-width: 750px) {
   .contact .field {
@@ -37,3 +64,135 @@
     grid-column-gap: 2rem;
   }
 }
+
+/* ----------contact custom---------------- */
+.section-contact{
+  padding: 20px 0;
+}
+.contact-fields{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 2rem;
+  gap: 25px;
+}
+.title-contact{
+  font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    margin-top: 0;
+    color: #000000;
+    margin-bottom: 20px;
+}
+.subtitle p{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0;
+  color: #202124;
+  margin-bottom: 50px;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.field-div{
+  position: relative;
+}
+.field-div input{
+  width: 100%;
+  padding: 15px; 
+  border-radius: 10px;
+  border-color: rgba(0, 0, 0, 0.5);
+}
+.field-div select:focus,
+.field-div input:focus{
+  border: none;
+}
+.field-div select{
+  width: 100%;
+  height: 50px;
+  padding: 0 12px; 
+  border-radius: 10px;
+
+  color: black;
+  font-weight: 400;
+  font-size: 20px;
+}
+.firstoption{
+  color: #999999;
+}
+.field-div label{
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  font-family: 'Roboto';
+  color: #999999;
+  /* font-weight: 300; */
+  font-size: 18px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+.field-label-textarea{
+  position: absolute;
+  top: 25px !important;
+  left: 15px;
+  font-family: 'Roboto';
+  color: #999999;
+  /* font-weight: 300; */
+  font-size: 18px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+/* .field-div textarea:focus ~ label,
+.field-div textarea:valid ~ label
+{
+  font-family: 'Roboto';
+  top: -2px ;
+  left: 15px;
+  font-family: 300;
+  color: red;
+  background: #fff;
+  font-size: 16px;
+  transform: translateY(-50%) ;
+} */
+.field-div textarea:focus ~ label,
+.field-div textarea:valid ~ label,
+.field-div textarea:focus ~ label,
+.field-div input:focus ~ label,
+.field-div select:focus ~ label,
+.field-div input:valid ~ label,
+.field-div select:valid ~ label{
+  font-family: 'Roboto';
+  top: -2px !important;
+  left: 15px;
+  font-family: 300;
+  color: red;
+  background: #fff;
+  font-size: 16px;
+  transform: translateY(-50%) ;
+}
+.field-div textarea{
+  width: 100%;
+  height: 260px;
+  padding: 15px; 
+  border-radius: 10px;
+  border-color: rgba(0, 0, 0, 0.5);
+}
+.field-div textarea:focus{
+  border: none;
+}
+@media screen and (max-width: 990px) {
+  .contact-fields{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+  

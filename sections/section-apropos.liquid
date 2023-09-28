@@ -1,0 +1,97 @@
+<style>
+    .section-ap{
+      padding: 50px 0px;
+    }
+    .container-ap{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+  
+      overflow: hidden;
+    }
+  
+    .ap-right,
+   {
+      width: 50%;
+    }
+  
+    .ap-description {
+      margin-top: 15px;
+      max-width: 800px;
+      text-align: justify;
+    }
+  
+    .ap-left img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .container-img{
+        background-color: pink;
+        display: flex;
+        max-height: 906px;
+        max-width: 685px;
+        align-items: center;
+        justify-content: center;
+    }
+  
+    @media(min-width: 768px) {
+     .container-ap {
+  
+      max-height: 100vh;
+   
+    }
+    }
+  
+    @media(max-width: 768px) {
+      .container-ap {
+        flex-direction: column;
+      }
+      .ap-right,
+      .ap-left {
+        width: 100%;
+      }
+    }
+  </style>
+  <section class="section-ap">
+      <div class=" container-ap page-width">
+        <div class="ap-left">
+            <div class="container-img">
+              <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ collection.settings.title }}">
+            </div>
+          </div>
+        <div class="ap-right">
+          <h1 class="font-heading text-4xl xl:text-5xl break-word">{{ section.settings.heading }}</h1>
+          <div class="ap-description"> {{ section.settings.page.content }} </div>
+        </div>
+        
+      </div>
+  </section>
+  
+  
+  {% schema %}
+    {
+      "name": "Section à propos",
+      "tag": "section",
+      "class": "section",
+      "settings": [
+        {
+            "type": "page",
+            "id": "page",
+            "label": "t:sections.page.settings.page.label"
+          },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ],
+      "presets": [
+        {
+          "name": "Section à propos"
+        }
+      ]
+    }
+  {% endschema %}
